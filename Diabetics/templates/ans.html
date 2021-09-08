@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+        {% if ans=="NO" %}
+            <h1 style="font-family: 'Arial Black'; font-size: xx-large; color: #07ee07; text-align: center; margin-top: 20%">
+               Congratulations you don't have Diabeties
+            </h1>
+        {% else %}
+            <h1 style="font-family: 'Arial Black'; font-size: xx-large; color: #ff1919; text-align: center; margin-top: 20%">
+                Sorry you have Diabeties <br>
+                <h3 style="font-family: 'Arial Black'; font-size: large; color: #187a18; text-align: center;">
+                    Take Care of your self
+                </h3>
+            </h1>
+        {% endif %}
+
+{% endblock content %}

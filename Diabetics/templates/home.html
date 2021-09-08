@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container" style="height: 40%; width: 50%;">
+        <form method="Post" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Check you have diabetics or not</legend>
+                <div class="container">
+                    {{ form.preg.label(class="form-control-label") }}
+                    {% if form.preg.errors %}
+                        {{ form.preg(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.preg.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.preg(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.glucose.label(class="form-control-label") }}
+                    {% if form.glucose.errors %}
+                        {{ form.glucose(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.glucose.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.glucose(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.bp.label(class="form-control-label") }}
+                    {% if form.bp.errors %}
+                        {{ form.bp(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.bp.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.bp(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.st.label(class="form-control-label") }}
+                    {% if form.st.errors %}
+                        {{ form.st(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.st.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.st(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.i.label(class="form-control-label") }}
+                    {% if form.i.errors %}
+                        {{ form.i(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.i.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.i(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.bmi.label(class="form-control-label") }}
+                    {% if form.bmi.errors %}
+                        {{ form.bmi(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.bmi.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.bmi(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.DPF.label(class="form-control-label") }}
+                    {% if form.DPF.errors %}
+                        {{ form.DPF(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.DPF.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.DPF(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+                <div class="container">
+                    {{ form.age.label(class="form-control-label") }}
+                    {% if form.age.errors %}
+                        {{ form.age(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.age.errors %}
+                                <span>{{ error  }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.age(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
